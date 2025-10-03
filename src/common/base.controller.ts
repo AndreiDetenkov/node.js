@@ -27,10 +27,6 @@ export abstract class BaseController {
     return this.send(res, 200, message);
   }
 
-  public created(res: Response) {
-    return res.sendStatus(201);
-  }
-
   protected bindRoutes(routes: IRoute[]) {
     for (const route of routes) {
       this.logger.log(`[${route.method}] ${route.path}`);

@@ -4,7 +4,7 @@ export class LoggerService {
   public logger: Logger<ILogObj>;
 
   constructor() {
-    this.logger = new Logger();
+    this.logger = new Logger({ hideLogPositionForProduction: true });
   }
 
   log(...arg: unknown[]) {
